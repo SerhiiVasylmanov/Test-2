@@ -1,0 +1,64 @@
+.mission {
+  margin-bottom: 50px;
+  &-wrapper {
+    background-color: $titleText;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -95px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: url(../image/LikeImage.png);
+      height: 196px;
+      width: 173px;
+    }
+  }
+  &__heading {
+    max-width: 585px;
+    padding: 210px 20px 0;
+    margin: 50px auto;
+    text-align: center;
+    color: $whiteText;
+    &-title {
+      margin-bottom: 38px;
+      @include DM-Serif(400, 48, 56);
+    }
+    &-text {
+      @include Source-Sans(400, 21, 32);
+      margin-bottom: 5px;
+    }
+    &-text + &-text {
+      margin-bottom: 62px;
+    }
+    &-btn {
+      padding: 16px 32px;
+      background: $whiteText;
+      border-radius: 50px;
+      @include Source-Sans(400, 16, 23);
+      color: $titleText;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #006e56;
+        color: $whiteText;
+      }
+    }
+  }
+  &__image {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include for-tablet-portrait-up {
+  .mission-wrapper::after {
+    top: -70px;
+    width: 130px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

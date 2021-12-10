@@ -1,0 +1,53 @@
+@mixin DM-Serif($fw, $fs, $lh) {
+  font-family: "DM Serif Display", serif;
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh + px;
+}
+
+@mixin Merriweather($fw, $fs, $lh) {
+  font-family: "Merriweather", serif;
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh + px;
+}
+
+@mixin Roboto($fw, $fs, $lh) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh + px;
+}
+
+@mixin Source-Sans($fw, $fs, $lh) {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh + px;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1219px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

@@ -1,0 +1,127 @@
+.planned {
+  margin-bottom: 176px;
+  padding: 0 0 162px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 157px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: rgba(27, 31, 43, 0.12);
+    border-radius: 40px;
+    bottom: 0;
+  }
+  &-wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  &__heading {
+    max-width: 640px;
+    margin: 0 auto 96px;
+    text-align: center;
+    &-title {
+      @include DM-Serif(400, 48, 56);
+      color: $titleText;
+      margin-bottom: 38px;
+    }
+    &-text {
+      @include Source-Sans(400, 21, 32);
+      color: $mainColor;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+    &_family,
+    &_information,
+    &_emergency,
+    &_assessments {
+      max-width: 460px;
+      padding: 60px 50px;
+      border-radius: 20px;
+    }
+    &-title {
+      @include Roboto(700, 40, 47);
+      color: $cardText;
+      margin-bottom: 12px;
+    }
+    &-text {
+      @include Roboto(400, 17, 24);
+      color: $cardText;
+    }
+    &-logo {
+      margin-bottom: 20px;
+    }
+    &_family {
+      background: #dae1f4;
+    }
+    &_information {
+      background: #d0e6f3;
+    }
+    &_emergency {
+      background: #e0f0e6;
+    }
+    &_assessments {
+      background: #f4f0e9;
+    }
+  }
+  &__card > div:nth-child(2n + 1) {
+    .planned__card-image {
+      margin-bottom: 40px;
+    }
+  }
+  &__card > div:nth-child(2n) {
+    .planned__card-heading {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+@include for-tablet-landscape-up {
+  .planned {
+    padding-bottom: 100px;
+    margin-bottom: 156px;
+  }
+}
+
+@include for-tablet-portrait-up {
+  .planned {
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+  }
+}
+
+@include for-phone-only {
+  .container {
+    max-width: 90%;
+  }
+  .planned {
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+    &__card {
+      &_family,
+      &_information,
+      &_emergency,
+      &_assessments {
+        max-width: 460px;
+        padding: 24px;
+        border-radius: 20px;
+      }
+      &-image {
+        width: 90%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

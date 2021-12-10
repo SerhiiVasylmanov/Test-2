@@ -1,0 +1,27 @@
+@import "./style/reset";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather&family=Roboto:wght@400;700&family=Source+Sans+Pro&display=swap");
+@import "./style/common/variables";
+@import "./style/common/mixins";
+
+body {
+  font-family: serif, sans-serif;
+  background-color: #f9f7f4;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@import "./style/header";
+@import "./style/homepage";
+@import "./style/cardPlanned";
+@import "./style/reviews";
+@import "./style/mission";
+@import "./style/store";
+@import "./style/_subscription";
+@import "./style/_footer";
